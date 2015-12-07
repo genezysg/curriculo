@@ -32,6 +32,13 @@ var BasicInfoCard = React.createClass({
   render:function(){
     return(
       <div className="mdl-card">
+        <div className="mdl-card__title">
+          <h2 className="mdl-card__title-text">{this.props.data.personalData.fullname}</h2>
+        </div>
+        <div className="mdl-card__supporting-text">
+            {this.props.data.personalData.title}
+        </div>
+
         <img src={this.props.data.personalData.photo} className="img-circle"/>
       </div>
 
