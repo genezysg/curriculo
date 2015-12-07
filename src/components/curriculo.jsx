@@ -1,3 +1,7 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+
 var ExperienciaList = React.createClass({
   render: function(){
     return (
@@ -22,6 +26,10 @@ var Experiencia = React.createClass({
 });
 
 
+
+
+
+
 var Cabecalho = React.createClass({
   render: function(){
     return (
@@ -44,7 +52,9 @@ var Curriculo  = React.createClass({
   }
 });
 
-React.render(
+
+
+ReactDOM.render(
   <Curriculo />,
   document.getElementById('curriculo')
 );
