@@ -27,17 +27,28 @@ var Experiencia = React.createClass({
 
 
 
-
-
-
+var ApplicantCard = React.createClass({
+ render:function(){
+    return (
+    <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div className="mdl-layout__drawer">
+        <span className="mdl-layout-title">Title</span>
+        <nav className="mdl-navigation">
+          <a className="mdl-navigation__link" href="http://github.com/genezysg">github.com/genezysg</a>
+        </nav>
+      </div>
+    </div>
+    );
+ }
+});
 var Cabecalho = React.createClass({
   render: function(){
-    return (
+    return(
       <div className="cabecalho">
-        Aqui eh o cabeçalho do curriculo
+        Aqui eh o cabeçalho do
       </div>
     );
-  }
+}
 });
 
 var Curriculo  = React.createClass({
@@ -45,7 +56,7 @@ var Curriculo  = React.createClass({
     return (
       <div className="curriculo">
         Curriculo do Genezys
-        <Cabecalho/>
+        <ApplicantCard/>
         <ExperienciaList/>
       </div>
     );
