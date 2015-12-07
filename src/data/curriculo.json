@@ -1,0 +1,26 @@
+{
+  "applicant":"genezysg",
+  "personalData":{
+    "fullname":"Genezys Marques Gonçalves",
+    "title":"Desenvolvedor de Software",
+    "tel":"2137343982",
+    "cel":"21965525619",
+    "email":"genezys@gmail.com",
+    "photo":"img/genezys.jpg"
+  },
+  "educations":[
+    {"place":"Local1",
+      "year":2015,
+      "finish":2015}
+    ],
+  "experiences":[
+    {"place":"ist",
+      "job":"estudante",
+     "description":"fui estudante, hue plz",
+     "initialDate":2015,
+      "endDate":2015,
+      "isFinished":false
+    }
+  ],
+   "skills":["sql","c","go","js"]
+}

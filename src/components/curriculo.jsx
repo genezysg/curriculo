@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var resume = require ('../data/curriculo.json');
 
+console.log(resume);
 
 var ExperienciaList = React.createClass({
   render: function(){
@@ -26,21 +28,36 @@ var Experiencia = React.createClass({
 });
 
 
+var BasicInfoCard = React.createClass({
+  render:function(){
+    return(
+      <div className="mdl-card">
+        <img src={this.props.data.personalData.photo} className="img-circle"/>
+      </div>
 
-var ApplicantCard = React.createClass({
+    );
+  }
+});
+
+var ApplicantLeftInfo = React.createClass({
  render:function(){
     return (
     <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div className="mdl-layout__drawer">
-        <span className="mdl-layout-title">Title</span>
+
+        <span className="mdl-layout-title">{this.props.data.name}</span>
         <nav className="mdl-navigation">
-          <a className="mdl-navigation__link" href="http://github.com/genezysg">github.com/genezysg</a>
+          <BasicInfoCard data={this.props.data}/>
+          <a className="mdl-navigation__link" href=""></a>
         </nav>
       </div>
     </div>
     );
  }
 });
+
+
+
 var Cabecalho = React.createClass({
   render: function(){
     return(
@@ -56,7 +73,7 @@ var Curriculo  = React.createClass({
     return (
       <div className="curriculo">
         Curriculo do Genezys
-        <ApplicantCard/>
+        <ApplicantLeftInfo data={this.props.data}/>
         <ExperienciaList/>
       </div>
     );
@@ -66,6 +83,6 @@ var Curriculo  = React.createClass({
 
 
 ReactDOM.render(
-  <Curriculo />,
+  <Curriculo data={resume}/>,
   document.getElementById('curriculo')
 );
