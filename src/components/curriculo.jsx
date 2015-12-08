@@ -38,10 +38,21 @@ var BasicInfoCard = React.createClass({
         <div className="mdl-card__supporting-text">
             {this.props.data.personalData.title}
         </div>
-
-        <img src={this.props.data.personalData.photo} className="img-circle"/>
       </div>
+    );
+  }
+});
 
+var SocialNetworkCard = React.createClass({
+  render:function(){
+    return (
+      <div className="mdl-card">
+        <div className="mdl-card__actions">
+        <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Get Started
+        </a>
+        </div>
+      </div>
     );
   }
 });
@@ -51,10 +62,12 @@ var ApplicantLeftInfo = React.createClass({
     return (
     <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div className="mdl-layout__drawer">
-
-        <span className="mdl-layout-title">{this.props.data.name}</span>
+        <header className="leftHeader">
+        <span className="mdl-layout-title">{this.props.data.personalData.fullname}</span>
+            <img src={this.props.data.personalData.photo} className="img-circle"/>
+        </header>
         <nav className="mdl-navigation">
-          <BasicInfoCard data={this.props.data}/>
+
           <a className="mdl-navigation__link" href=""></a>
         </nav>
       </div>
@@ -79,7 +92,6 @@ var Curriculo  = React.createClass({
   render: function() {
     return (
       <div className="curriculo">
-        Curriculo do Genezys
         <ApplicantLeftInfo data={this.props.data}/>
         <ExperienciaList/>
       </div>
